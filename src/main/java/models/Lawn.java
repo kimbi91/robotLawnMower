@@ -14,6 +14,10 @@ public class Lawn {
         this.positions = new Position[ySide][xSide];
     }
 
+    public Position getPosition(int xSide, int ySide) {
+        return positions[ySide][xSide];
+    }
+
     public int getxSide() {
         return xSide;
     }

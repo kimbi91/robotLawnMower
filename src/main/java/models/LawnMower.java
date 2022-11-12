@@ -8,6 +8,12 @@ public class LawnMower {
 
     private boolean isDone;
 
+    public LawnMower(Lawn lawn, Navigation navigation) {
+        this.lawn = lawn;
+        this.navigation = navigation;
+        this.isDone = false;
+    }
+
     public Lawn getLawn() {
         return lawn;
     }

@@ -2,10 +2,10 @@ package enums;
 
 public enum Direction {
 
-    NORTH(1),
-    SOUTH(2),
-    EAST(3),
-    WEST(4);
+    UP(1),
+    DOWN(2),
+    RIGHT(3),
+    LEFT(4);
 
     public final int code;
 

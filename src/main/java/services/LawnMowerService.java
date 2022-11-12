@@ -35,7 +35,14 @@ public class LawnMowerService {
     public boolean isDone() {
         Position[][] positions = lawnMower.getLawn().getPositions();
 
-        //TODO
-        //ciklussal végig menni a tömbön és ha van olyan mező amin nincs lenyírva return false ha nincs return true
+        for (Position[] positionArray : positions) {
+            for (Position position : positionArray) {
+                if (!position.isMowed()) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 }

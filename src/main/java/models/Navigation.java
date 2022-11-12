@@ -2,6 +2,7 @@ package models;
 
 import enums.Direction;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Navigation {
@@ -14,8 +15,17 @@ public class Navigation {
 
     private List<Position> positionLog;
 
+    private Lawn lawn;
+
     public Direction getCurrentDirection() {
         return currentDirection;
+    }
+
+    public Navigation(Direction currentDirection, Position currentPosition, Lawn lawn) {
+        this.currentDirection = currentDirection;
+        this.currentPosition = currentPosition;
+        this.lawn = lawn;
+        this.positionLog = new ArrayList<>();
     }
 
     public void setCurrentDirection(Direction currentDirection) {
@@ -44,5 +54,23 @@ public class Navigation {
 
     public void setPositionLog(List<Position> positionLog) {
         this.positionLog = positionLog;
+    }
+
+    public Lawn getLawn() {
+        return lawn;
+    }
+
+    public void setLawn(Lawn lawn) {
+        this.lawn = lawn;
+    }
+
+    @Override
+    public String toString() {
+        return "Navigation{" +
+                "currentDirection=" + currentDirection +
+                ", currentPosition=" + currentPosition +
+                ", nextPosition=" + nextPosition +
+                ", positionLog=" + positionLog +
+                '}';
     }
 }

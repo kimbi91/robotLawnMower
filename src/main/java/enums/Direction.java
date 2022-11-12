@@ -16,4 +16,8 @@ public enum Direction {
     public String getName() {
         return this.name().toLowerCase();
     }
+
+    public int getCode() {
+        return this.code;
+    }
 }

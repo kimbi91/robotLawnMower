@@ -41,4 +41,5 @@ public class Lawn {
     public void setPositions(Position[][] positions) {
         this.positions = positions;
     }
+
 }

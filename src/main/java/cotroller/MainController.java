@@ -20,7 +20,6 @@ public class MainController {
         LawnMowerService lawnMowerService = new LawnMowerService(lawnMower, navigationService);
 
         while (!lawnMowerService.isDone()) {
-            lawnMowerService.moveToNextPosition();
             lawnMowerService.mowe();
         }
 

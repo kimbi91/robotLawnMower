@@ -15,16 +15,20 @@ public class LawnMowerService {
     }
 
     public void mowe() {
-        lawnMower
-                .getLawn()
-                .getPosition(
-                        lawnMower.getNavigation()
-                                .getCurrentPosition()
-                                .getxAxis(),
-                        lawnMower.getNavigation()
-                                .getCurrentPosition()
-                                .getyAxis())
-                .setMowed(true);
+        if (lawnMower.getNavigation().getCurrentPosition().getyAxis() != -1) {
+            lawnMower
+                    .getLawn()
+                    .getPosition(
+                            lawnMower.getNavigation()
+                                    .getCurrentPosition()
+                                    .getxAxis(),
+                            lawnMower.getNavigation()
+                                    .getCurrentPosition()
+                                    .getyAxis())
+                    .setMowed(true);
+        }
+        lawnMower.getNavigation().getCurrentPosition().setMowed(true);
+        moveToNextPosition();
     }
 
     public void moveToNextPosition() {

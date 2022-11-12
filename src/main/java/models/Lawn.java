@@ -8,6 +8,12 @@ public class Lawn {
 
     private Position[][] positions;
 
+    public Lawn(int xSide, int ySide) {
+        this.xSide = xSide;
+        this.ySide = ySide;
+        this.positions = new Position[ySide][xSide];
+    }
+
     public int getxSide() {
         return xSide;
     }

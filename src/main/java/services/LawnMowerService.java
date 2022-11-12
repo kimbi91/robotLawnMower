@@ -5,9 +5,9 @@ import models.Position;
 
 public class LawnMowerService {
 
-    private LawnMower lawnMower;
+    private final LawnMower lawnMower;
 
-    private NavigationService navigationService;
+    private final NavigationService navigationService;
 
     public LawnMowerService(LawnMower lawnMower, NavigationService navigationService) {
         this.lawnMower = lawnMower;

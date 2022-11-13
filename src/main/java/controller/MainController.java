@@ -19,13 +19,21 @@ public class MainController {
         LawnMower lawnMower = new LawnMower(lawn, navigation);
         LawnMowerService lawnMowerService = new LawnMowerService(lawnMower, navigationService);
 
+        System.out.println("Original lawn positions:");
+        for (Position[] value : lawn.getPositions()) {
+            for (Position position : value) {
+                System.out.println(position);
+            }
+        }
 
         while (!lawnMowerService.isDone()) {
             lawnMowerService.mowe();
         }
 
+        System.out.println("\nLawn mower log:");
         System.out.println(lawnMower.getNavigation().getPositionLog());
 
+        System.out.println("\nAfter the lawn mower finished");
         for (Position[] value : lawn.getPositions()) {
             for (Position position : value) {
                 System.out.println(position);

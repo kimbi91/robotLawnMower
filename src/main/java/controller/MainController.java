@@ -1,4 +1,4 @@
-package cotroller;
+package controller;
 
 import models.Lawn;
 import models.LawnMower;
@@ -18,6 +18,7 @@ public class MainController {
 
         LawnMower lawnMower = new LawnMower(lawn, navigation);
         LawnMowerService lawnMowerService = new LawnMowerService(lawnMower, navigationService);
+
 
         while (!lawnMowerService.isDone()) {
             lawnMowerService.mowe();
